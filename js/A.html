@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>鼠标移入移出显示效果</title>
+    <style>
+        #div2 {
+            width: 400px;
+            height: 400px;
+            background: red;
+            border: 1px solid #999;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="div2" onmousemove="over()" onmouseout="out()"></div>
+</body>
+<script type="text/javascript">
+    function over() {
+        var obj = document.getElementById("div2");
+        obj.style.width = "400px";
+        obj.style.height = "400px";
+        obj.style.background = "green";
+    }
+
+    function out() {
+        var obj = document.getElementById("div2");
+        obj.style.width = "400px";
+        obj.style.height = "400px";
+        obj.style.background = "red";
+    }
+</script>
+</html>

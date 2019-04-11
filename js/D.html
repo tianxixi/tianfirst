@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>输入两个数字得出较大者</title>
+    <script>
+        function check() {
+            var num1 = document.getElementById("a").value;
+            var num2 = document.getElementById("b").value;
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("请输入数字");
+                return;
+            }
+            if (parseInt(num2) > parseInt(num1)) {
+                alert(num2);
+            } else {
+                alert(num1);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="a">
+    <input type="text" id="b">在两个输入框中分别输入数字
+    <button onclick="check()">判断</button>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点击事件改变网页背景图片</title>
+    <script>
+        function mychange1() {
+            document.getElementById("div1").style.backgroundImage = "url(images/heiguafu2.jpg)";
+        }
+
+        function mychange2() {
+            document.getElementById("div1").style.backgroundImage = "url(images/heiguafu.jpg)";
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1" style="height:600px; width:800px; background-image: url(images/heiguafu.jpg)">这是一个div</div>
+    <input type="button" value="点击切换" onclick="mychange1()" />
+    <input type="button" value="点击还原" onclick="mychange2()" />
+</body>
+</html>

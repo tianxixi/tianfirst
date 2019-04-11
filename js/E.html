@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>改变右键默认效果</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0
+        }
+
+        #ul1 {
+            width: 130px;
+            height: 140px;
+            padding: 10px 3px;
+            background: #fff;
+            border: #ACA899 1px solid;
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        #ul1 li {
+            width: 130px;
+            height: 28px;
+            line-height: 28px;
+            font-size: 14px;
+            border-bottom: #ACA899 1px dashed;
+            text-align: center;
+            list-style: none
+        }
+
+        #ul1 li:hover {
+            background: #316AC5
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var ul = document.getElementById("ul1")
+            document.oncontextmenu = function(ev) {
+                var ev = ev || window.event
+                var l = ev.clientX
+                var t = ev.clientY
+                ul.style.display = "block"
+                ul.style.left = l + 'px'
+                ul.style.top = t - 16 + 'px'
+                return false;
+            }
+            document.onclick = function() {
+                ul.style.display = "none"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <ul id="ul1">
+        <li>变成紫❤</li>
+        <li>变成红❤</li>
+        <li>变成绿❤</li>
+        <li>变成黄❤</li>
+        <li>变成蓝❤</li>
+    </ul>
+</body>
+</html>
